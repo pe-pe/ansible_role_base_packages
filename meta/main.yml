@@ -25,13 +25,12 @@ galaxy_info:
         - 7
     - name: Fedora
       versions:
-        - 34
-        - 33
         - 32
 
   galaxy_tags:
     - base
     - packages
     - simple
+    - generic
 
 dependencies: []
