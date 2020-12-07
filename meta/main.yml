@@ -32,5 +32,6 @@ galaxy_info:
     - packages
     - simple
     - generic
+    - pip
 
 dependencies: []

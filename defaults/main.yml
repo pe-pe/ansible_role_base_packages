@@ -1,3 +1,7 @@
 ---
 # default empty set of base packages
 base_packages: []
+base_pip_packages: []
+
+# default name of package delivering pip
+pip_package: python3-pip
