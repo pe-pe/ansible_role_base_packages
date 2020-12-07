@@ -15,6 +15,20 @@ galaxy_info:
         - bionic
         - xenial
         - trusty
+    - name: Debian
+      versions:
+        - stretch
+        - buster
+    - name: EL
+      versions:
+        - 8
+        - 7
+    - name: Fedora
+      versions:
+        - 34
+        - 33
+        - 32
+
   galaxy_tags:
     - base
     - packages

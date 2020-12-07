@@ -1,0 +1,16 @@
+---
+- name: Verify
+  hosts: all
+  gather_facts: false
+  vars_files:
+    - vars.yml
+
+  tasks:
+    - name: Gather the package facts
+      package_facts:
+        manager: auto
+
+    - name: Check whether required packages are installed
+      assert:
+        that: "'{{ item }}' in ansible_facts.packages"
+      loop: "{{ base_packages }}"

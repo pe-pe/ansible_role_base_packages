@@ -1,4 +1,7 @@
 ---
+# Include OS family specific tasks
+- include_tasks: "{{ ansible_os_family | lower }}.yml"
+
 - name: Install base packages
   package:
     name: "{{ item }}"

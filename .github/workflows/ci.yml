@@ -1,0 +1,48 @@
+---
+name: CI
+'on':
+  pull_request:
+  push:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    # Every Sunday 2 a.m.
+    - cron:  '0 2 * * 0'
+
+jobs:
+  test:
+    name: Molecule
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        distribution:
+          - ubuntu:focal
+          - ubuntu:bionic
+          - ubuntu:xenial
+          - ubuntu:trusty
+          - debian:stretch
+          - debian:buster
+          - centos:8
+          - centos:7
+          - fedora:34
+          - fedora:33
+          - fedora:32
+
+    steps:
+      - name: Check-out repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install Molecule and test tools
+        run: pip3 install ansible molecule molecule-docker docker yamllint ansible-lint
+
+      - name: Run Molecule tests
+        run: molecule test
+        env:
+          # Include colors in molecule and ansible output
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
+          DISTRIBUTION_TO_TEST: ${{ matrix.distribution }}
