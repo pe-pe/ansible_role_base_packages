@@ -3,10 +3,13 @@ name: CI
 'on':
   pull_request:
   push:
+    branches:
+      - main
   schedule:
     # * is a special character in YAML so you have to quote this string
     # Every Sunday 2 a.m.
     - cron:  '0 2 * * 0'
+  workflow_dispatch:
 
 jobs:
   test:
