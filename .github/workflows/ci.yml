@@ -46,3 +46,11 @@ jobs:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
           DISTRIBUTION_TO_TEST: ${{ matrix.distribution }}
+
+      - name: Run Molecule tests with --check Ansible mode
+        run: molecule check
+        env:
+          # Include colors in molecule and ansible output
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
+          DISTRIBUTION_TO_TEST: ${{ matrix.distribution }}
