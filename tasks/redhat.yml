@@ -1,1 +1,8 @@
 ---
+- name: Install dependencies for Ansible on RedHat/Python 2.x
+  package:
+    name: epel-release
+    state: present
+  when:
+    - ansible_python.version.major | int < 3
+    - base_pip_packages | length > 0

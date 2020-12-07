@@ -4,4 +4,4 @@ base_packages: []
 base_pip_packages: []
 
 # default name of package delivering pip
-pip_package: python3-pip
+pip_package: "{{ 'python3-pip' if (ansible_python.version.major | int == 3) else 'python-pip' }}"

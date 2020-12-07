@@ -2,7 +2,7 @@
 # Include OS family specific tasks
 - include_tasks: "{{ ansible_os_family | lower }}.yml"
 
-- name: Conditionally append pip to base packages
+- name: Append pip to base packages list
   set_fact:
     base_packages: "{{ base_packages + [ pip_package ] }}"
   when:
