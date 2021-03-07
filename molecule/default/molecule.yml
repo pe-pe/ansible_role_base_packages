@@ -6,6 +6,8 @@ driver:
 lint: |
   set -e
   yamllint .
+  mkdir -p .cache/roles
+  ln -s . .cache/roles/ansible-role-base-packages  # workaround for ansible-lint >=5.0.0
   ansible-lint  # No params require version >=4.2.0 of ansible-lint
 platforms:
   - name: instance

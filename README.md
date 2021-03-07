@@ -1,11 +1,15 @@
 Base Packages
 =========
 
+[![Role](https://img.shields.io/ansible/role/52179.svg)](https://galaxy.ansible.com/pe_pe/base_packages/)
+[![Quality](https://img.shields.io/ansible/quality/52179.svg)](https://galaxy.ansible.com/pe_pe/base_packages/)
+[![CI](https://github.com/pe-pe/ansible-role-base-packages/workflows/CI/badge.svg)](https://github.com/pe-pe/ansible-role-base-packages/actions)
+
 Ansible role that installs provided list of base packages for which does not make sense to create separate roles.
 
 Packages are installed according to user specification - from native operating system package manager or `pip` (package installer for Python).
 
-When pip packages are requested to be installed - the role will install native operating system package to provide `pip` command and additional dependencies in case executed on hosts where Ansible is leveraging on Python 2.x (ie. role will install `epel-release` on EL7).
+**When pip packages are requested to be installed - the role will install native operating system package to provide `pip` command and additional dependencies in case executed on hosts where Ansible is leveraging on Python 2.x (ie. role will install `epel-release` on EL7).**
 
 Requirements
 ------------
@@ -29,7 +33,7 @@ base_pip_packages:
 ```
 By default both lists of packages are empty.
 
-Variable `pip_package` specifies name of native operating system package delivering pip, which is installed whenever `base_pip_packages` is not empty. It's set by default to:
+Variable `pip_package` specifies name of native operating system package delivering `pip`, which is installed whenever `base_pip_packages` is not empty. It's set by default to:
 - `python3-pip` for distributions where Ansible leverages on Python 3.x
 - `python-pip` for other distributions
 
