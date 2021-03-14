@@ -1,6 +1,7 @@
 ---
 galaxy_info:
   role_name: base_packages
+  namespace: pe_pe
   author: PePe
   description: Base packages installation role
   company: none
