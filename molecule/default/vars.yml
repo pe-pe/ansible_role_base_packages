@@ -2,4 +2,4 @@
 base_packages:
   - unzip
 base_pip_packages:
-  - yamllint
+  - cowsay
