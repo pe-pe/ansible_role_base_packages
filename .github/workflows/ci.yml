@@ -18,10 +18,10 @@ jobs:
     strategy:
       matrix:
         distribution:
+          - ubuntu:hirsute
           - ubuntu:focal
           - ubuntu:bionic
           - ubuntu:xenial
-          - ubuntu:trusty
           - debian:stretch
           - debian:buster
           - centos:8

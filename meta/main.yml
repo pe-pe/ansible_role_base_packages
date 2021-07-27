@@ -12,10 +12,10 @@ galaxy_info:
   platforms:
     - name: Ubuntu
       versions:
+        - hirsute
         - focal
         - bionic
         - xenial
-        - trusty
     - name: Debian
       versions:
         - stretch
