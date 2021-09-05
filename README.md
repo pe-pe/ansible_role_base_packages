@@ -3,7 +3,7 @@ Base Packages
 
 [![Role](https://img.shields.io/ansible/role/52179.svg)](https://galaxy.ansible.com/pe_pe/base_packages/)
 [![Quality](https://img.shields.io/ansible/quality/52179.svg)](https://galaxy.ansible.com/pe_pe/base_packages/)
-[![CI](https://github.com/pe-pe/ansible-role-base-packages/workflows/CI/badge.svg)](https://github.com/pe-pe/ansible-role-base-packages/actions)
+[![CI](https://github.com/pe-pe/ansible_role_base_packages/workflows/CI/badge.svg)](https://github.com/pe-pe/ansible_role_base_packages/actions)
 
 Ansible role that installs provided list of base packages for which does not make sense to create separate roles.
 

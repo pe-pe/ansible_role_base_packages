@@ -5,4 +5,4 @@
     - vars.yml
 
   roles:
-    - ansible-role-base-packages
+    - ansible_role_base_packages
