@@ -18,14 +18,15 @@ jobs:
     strategy:
       matrix:
         distribution:
-          - ubuntu:hirsute
+          - ubuntu:jammy
           - ubuntu:focal
           - ubuntu:bionic
           - ubuntu:xenial
-          - debian:stretch
+          - debian:bullseye
           - debian:buster
-          - centos:8
-          - centos:7
+          - debian:stretch
+          - registry.access.redhat.com/ubi8/ubi:latest
+          - fedora:35
           - fedora:34
           - fedora:33
           - fedora:32
