@@ -3,20 +3,20 @@
 - include_tasks: "{{ ansible_os_family | lower }}.yml"
 
 - name: Append pip to base packages list
-  set_fact:
+  ansible.builtin.set_fact:
     base_packages: "{{ base_packages + [ pip_package ] }}"
   when:
     - base_pip_packages | length > 0
     - pip_package not in base_packages
 
 - name: Install base packages
-  package:
+  ansible.builtin.package:
     name: "{{ item }}"
     state: present
   loop: "{{ base_packages }}"
 
 - name: Install base pip packages
-  pip:
+  ansible.builtin.pip:
     name: "{{ item }}"
     state: present
   loop: "{{ base_pip_packages }}"

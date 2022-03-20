@@ -1,6 +1,6 @@
 ---
 - name: Install dependencies for Ansible on RedHat/Python 2.x
-  package:
+  ansible.builtin.package:
     name: epel-release
     state: present
   when:
