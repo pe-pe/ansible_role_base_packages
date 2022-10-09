@@ -1,6 +1,6 @@
 ---
-# Include OS family specific tasks
-- include_tasks: "{{ ansible_os_family | lower }}.yml"
+- name: Include OS family specific tasks
+  ansible.builtin.include_tasks: "{{ ansible_os_family | lower }}.yml"
 
 - name: Append pip to base packages list
   ansible.builtin.set_fact:

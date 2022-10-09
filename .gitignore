@@ -3,3 +3,6 @@
 
 # .pyc files (python compiled code)
 *.pyc
+
+# moledule .cache directory
+.cache
