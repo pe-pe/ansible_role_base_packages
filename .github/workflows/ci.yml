@@ -19,7 +19,6 @@ jobs:
       matrix:
         distribution:
           - ubuntu:jammy
-          - ubuntu:hirsute
           - ubuntu:focal
           - ubuntu:bionic
           - ubuntu:xenial
