@@ -16,7 +16,7 @@
       loop: "{{ base_packages }}"
 
     - name: Check whether required pip package are reporting version
-      command: "{{ item|.split('=')|first }} --version"
+      command: "{{ item.split('=')|first }} --version"
       register: result
       failed_when: result.rc > 0
       changed_when: false
