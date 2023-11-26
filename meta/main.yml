@@ -12,10 +12,9 @@ galaxy_info:
   platforms:
     - name: Ubuntu
       versions:
+        - mantic
         - jammy
         - focal
-        - bionic
-        - xenial
     - name: Debian
       versions:
         - bullseye
@@ -26,9 +25,9 @@ galaxy_info:
         - '8'
     - name: Fedora
       versions:
-        - '35'
-        - '34'
-        - '33'
+        - '39'
+        - '38'
+        - '37'
 
   galaxy_tags:
     - base
