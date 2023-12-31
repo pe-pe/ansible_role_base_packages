@@ -19,4 +19,5 @@
   ansible.builtin.pip:
     name: "{{ item }}"
     state: present
+    virtualenv: ~/.venv
   loop: "{{ base_pip_packages }}"

@@ -7,7 +7,7 @@ Base Packages
 
 Ansible role that installs provided list of base packages for which does not make sense to create separate roles.
 
-Packages are installed according to user specification - from native operating system package manager or `pip` (package installer for Python).
+Packages are installed according to user specification - from native operating system package manager or `pip` (package installer for Python into ~/.venv virtual environment).
 
 **When pip packages are requested to be installed - the role will install native operating system package to provide `pip` command and additional dependencies in case executed on hosts where Ansible is leveraging on Python 2.x (ie. role will install `epel-release` on EL7).**
 
