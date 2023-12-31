@@ -9,6 +9,13 @@
     - base_pip_packages | length > 0
     - pip_package not in base_packages
 
+- name: Append venv to base packages list
+  ansible.builtin.set_fact:
+    base_packages: "{{ base_packages + [ venv_package ] }}"
+  when:
+    - base_pip_packages | length > 0
+    - venv_package not in base_packages
+
 - name: Install base packages
   ansible.builtin.package:
     name: "{{ item }}"

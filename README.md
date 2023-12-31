@@ -33,10 +33,13 @@ base_pip_packages:
 ```
 By default both lists of packages are empty.
 
-Variable `pip_package` specifies name of native operating system package delivering `pip`, which is installed whenever `base_pip_packages` is not empty. It's set by default to:
+Default variable `pip_package` specifies name of native operating system package delivering `pip`, which is installed whenever `base_pip_packages` is not empty. It's set by default to:
 - `python3-pip` for distributions where Ansible leverages on Python 3.x
 - `python-pip` for other distributions
 
+Default variable `venv_package` specifies name of native operating system package delivering `venv`, which is installed whenever `base_pip_packages` is not empty. It's set by default to:
+- `python3-venv` for distributions where Ansible leverages on Python 3.x
+- `python-venv` for other distributions
 
 Dependencies
 ------------
