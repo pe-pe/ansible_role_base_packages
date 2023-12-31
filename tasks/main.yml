@@ -15,6 +15,7 @@
   when:
     - base_pip_packages | length > 0
     - venv_package not in base_packages
+    - ansible_os_family != "RedHat" and ansible_distribution_major_version != 9
 
 - name: Install base packages
   ansible.builtin.package:
