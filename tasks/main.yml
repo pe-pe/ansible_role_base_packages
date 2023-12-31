@@ -27,4 +27,5 @@
     name: "{{ item }}"
     state: present
     virtualenv: ~/.venv
+    virtualenv_command: "{{ ansible_python.executable }} -m venv"
   loop: "{{ base_pip_packages }}"
