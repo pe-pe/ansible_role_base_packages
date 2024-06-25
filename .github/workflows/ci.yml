@@ -18,16 +18,15 @@ jobs:
     strategy:
       matrix:
         distribution:
-          - ubuntu:mantic
+          - ubuntu:noble
           - ubuntu:jammy
           - ubuntu:focal
+          - debian:bookworm
           - debian:bullseye
-          - debian:buster
           - registry.access.redhat.com/ubi9/ubi:latest
           - registry.access.redhat.com/ubi8/ubi:latest
+          - fedora:40
           - fedora:39
-          - fedora:38
-          - fedora:37
 
     steps:
       - name: Check-out repository
